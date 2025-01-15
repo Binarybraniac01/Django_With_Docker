@@ -1,4 +1,4 @@
-# version: '3.1'   # decides which docker compose version to use (not necessary to mention unless want to use specific version)
+# version: '3.9'   # decides which docker compose version to use (not necessary to mention unless want to use specific version)
 
 name: Docker_Djando_Project
 # if name not specified it will take hostapp project name
