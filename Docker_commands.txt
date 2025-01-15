@@ -29,5 +29,34 @@ docker exec suspicious_ritchie ls                    (show the ls and get back t
 __IN VSCODE PROJECT
 
 -- To build a docker image from project
-docker build -t my-docker-image .              (. represents the host project directory, this is Dockerfile path)
+docker build -t django-docker-image .              (. represents the host project directory, this is Dockerfile path)
+
+
+--To create container and run
+docker run -d --name my-django-container -p 8001:8000 django-docker-image
+
+(Note - when you make changes to your code be sure to create new Image)
+(-Now you can see your website running on http://127.0.0.1:8001/     as we have mapped
+ - [-d] to keep it running in background)
+
+
+
+--To add many services like(rds,port,env,volumes) while creating container we use docker-compose.yml
+	first create .yml file then run following command
+docker compose up -d
+	AND
+docker compose down                      (to stop and remove)
+
+
+
+--To Sychronize the hostapp(vscode project) changes to the docker
+docker run -d --name django-container -v .:/app -p 8001:8000 django-docker-image
+
+(In this we use volumes parameter s -v , it takes source and destination
+	above (.:/app) --  . is the root directory of hostapp 
+		       --  /app  is root directory of project in docker container	
+)
+
+
+
 

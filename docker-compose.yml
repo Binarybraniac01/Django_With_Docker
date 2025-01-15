@@ -1,0 +1,22 @@
+# version: '3.8'   # decides which docker compose version to use (not necessary to mention unless want to use specific version)
+
+name: Docker_Djando_Project
+# if name not specified it will take hostapp project name
+
+
+services:
+    app:       # Its just an identifier you can whatever name you want
+      image: django-docker-image
+      container_name: django-container
+      ports:
+        - "8001:8000"
+      volumes:
+        - .:/app    # its optional
+
+    # db:
+    #   image: mysql   #you can choose whichever version you like 
+    #   restart: always
+    #   ports:
+    #     - "3306:3306"
+    #   environment:
+    #     MYSQL_ROOT_PASSWORD: password

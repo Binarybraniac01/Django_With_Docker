@@ -1,4 +1,5 @@
 FROM python:3.10
+# FROM python:3.10-alpine           # its lighweight version works on basic django application 
 
 ENV PYTHONDONOTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
@@ -8,7 +9,7 @@ WORKDIR /app
 COPY requirements.txt .
 # (. means /app)
 
-RUN pip install --upgrade pip
+# RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 COPY . .
