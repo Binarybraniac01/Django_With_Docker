@@ -1,0 +1,33 @@
+-- To list running containers
+docker container ls
+
+-- To list all containers
+docker container ls -a
+
+-- To start container
+docker start suspicious_ritchie                (container name)
+		OR
+docker start 433814a82b79                      (ID)
+
+
+-- To stop container
+docker stop suspicious_ritchie                (container name)
+		OR
+docker stop 433814a82b79                      (ID)
+
+
+-- To open container in CLI and to work on it
+docker exec -it suspicious_ritchie bash
+
+
+-- To only excute the command on container and get back to my terminal
+docker exec suspicious_ritchie ls                    (show the ls and get back to terminal)
+
+
+
+---------------------------------------------------------------------------------------------
+__IN VSCODE PROJECT
+
+-- To build a docker image from project
+docker build -t my-docker-image .              (. represents the host project directory, this is Dockerfile path)
+
