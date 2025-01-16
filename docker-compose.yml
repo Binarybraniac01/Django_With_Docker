@@ -14,7 +14,7 @@ services:
         - .:/app    # its optional
 
     # db:
-    #   image: mysql   #you can choose whichever version you like 
+    #   image: mysql:8.0.40   #you can choose whichever version you like 
     #   restart: always
     #   ports:
     #     - "3306:3306"
