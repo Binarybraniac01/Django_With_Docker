@@ -9,7 +9,7 @@ WORKDIR /app
 COPY requirements.txt .
 # (. means /app)
 
-# RUN pip install --upgrade pip
+RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 COPY . .
